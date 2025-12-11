@@ -1,3 +1,2 @@
 def solution(n, k):
-    service = n // 10
-    return n * 12000 + k * 2000 - 2000 * service
+    return n * 12000 + k * 2000 - 2000 * (n // 10)
