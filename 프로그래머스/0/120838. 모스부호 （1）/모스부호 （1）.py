@@ -7,4 +7,4 @@ def solution(letter):
     '-.--':'y','--..':'z'}
     
     words = letter.split()
-    return "".join(morse[w] for w in words)
+    return ''.join(morse[w] for w in words)
