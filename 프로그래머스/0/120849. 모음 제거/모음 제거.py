@@ -1,9 +1,2 @@
 def solution(my_string):
-    vowels = "aeiou"
-    result = ""
-    
-    for ch in my_string:
-        if ch not in vowels:
-            result += ch
-    
-    return result 
+    return "".join([i for i in my_string if i not in {'a','e','i','o','u'}])
