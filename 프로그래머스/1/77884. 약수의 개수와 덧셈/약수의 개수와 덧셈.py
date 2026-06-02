@@ -1,21 +1,18 @@
 def solution(left, right):
-    answer = 0
+    total_sum = 0
     
-    for i in range(left, right + 1):
-        count = 0
-        
-        for j in range(1, i + 1):
-            if i % j == 0:
-                count += 1
+    for num in range(left, right + 1):
+        divisor_count = 0
+        for i in range(1, num + 1):
+            if num % i == 0:
+                divisor_count += 1
                 
-        if count % 2 == 0:
-            answer += i
+        if divisor_count % 2 == 0:
+            total_sum += num
         else:
-            answer -= i
-            
-    return answer
-        
-        
+            total_sum -= num
+    
+    return total_sum
         
         
         
