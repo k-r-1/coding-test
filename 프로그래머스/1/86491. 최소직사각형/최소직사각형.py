@@ -1,9 +1,12 @@
 def solution(sizes):
-    max_width = 0
-    max_height = 0
-
+    max_w = 0
+    max_h = 0
+    
     for w, h in sizes:
-        max_width = max(max_width, max(w, h))
-        max_height = max(max_height, min(w, h))
-
-    return max_width * max_height
+        long_side = max(w, h)
+        short_side = min(w, h)
+        
+        max_w = max(max_w, long_side)
+        max_h = max(max_h, short_side)
+        
+    return max_w * max_h
